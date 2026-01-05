@@ -1,0 +1,17 @@
+{
+    "name": "n-status-gmod",
+    "version": "2.0.0",
+    "description": "Garry's Mod Server Status Bot est un bot Discord entièrement optimisé pour fournir des mises à jour en temps réel sur l'état de votre serveur Garry's Mod ! Plus qu'un simple bot, il est conçu pour tenir votre communauté informée et engagée, avec des informations précises sur la disponibilité et les performances du serveur.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo 'Error: no test specified' && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^14.16.3",
+        "dotenv": "^17.2.3",
+        "gamedig": "^5.1.4"
+    }
+}

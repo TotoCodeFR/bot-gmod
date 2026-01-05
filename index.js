@@ -12,6 +12,7 @@ const { GameDig } = require('gamedig');
 const fs = require('fs');
 const config = require('./config.json');
 const { config: dotenvConfig } = require('dotenv');
+const express = require('express');
 
 dotenvConfig();
 
@@ -27,6 +28,14 @@ let peakData = {
     entries: [],
     peak24h: 0,
 };
+
+const app = express();
+app.get('/ping', (req, res) => {
+    res.send('pong');
+});
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Serveur Express démarré');
+});
 
 function loadPeakData() {
     try {

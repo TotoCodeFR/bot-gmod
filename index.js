@@ -152,8 +152,6 @@ async function checkServerStatus(interaction) {
 
         embed.setDescription(
             [
-                'Un aperçu en temps réel de votre serveur Garry\'s Mod.',
-                '',
                 `${playersEmoji} **Joueurs en ligne :** \`${playersOnline}/${maxPlayers}\``,
             ].join('\n')
         );

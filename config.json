@@ -14,7 +14,7 @@
   "showPing": true,
   "showGamemode": true,
   "showMap": true,
-  "showPeak24h": true,
+  "showPeak24h": false,
   "peakDataFile": "./peakData.json",
   "buttons": [
     {

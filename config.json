@@ -1,30 +1,29 @@
 {
-    "ServerIP": "game02.octoheberg.fr",
-    "ServerPort": 27047,
-    "ChannelID": "1400242209051381810",
-    "MessageID": null,
-    "servertitle": "TPR RP",
-    "gamemode": "DarkRP",
-    "colorembed": "#2b2d31",
-    "image": "https://i.imgur.com/cVq5RMP.png",
-    "setActivityOffline": "Serveur hors ligne",
-    "setActivityType": "WATCHING",
-    "footerText": "Statut mis à jour toutes les 60 secondes",
-    "footerIcon": "",
-    "showPing": true,
-    "showGamemode": true,
-    "showMap": true,
-    "showPeak24h": true,
-    "peakDataFile": "./peakData.json",
-    "buttons": [
-        {
-            "label": "Se connecter",
-            "url": "https://tinyurl.com/4btx9stk"
-        },
-        {
-            "label": "Collection",
-            "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3596544134"
-        }
-    ]
+  "ServerIP": "game02.octoheberg.fr",
+  "ServerPort": 27047,
+  "ChannelID": "1376177024061673535",
+  "MessageID": "1474724426393063554",
+  "servertitle": "TPR RP",
+  "gamemode": "DarkRP",
+  "colorembed": "#2b2d31",
+  "image": "https://i.imgur.com/cVq5RMP.png",
+  "setActivityOffline": "Serveur hors ligne",
+  "setActivityType": "Watching",
+  "footerText": "Statut mis à jour toutes les 60 secondes",
+  "footerIcon": "",
+  "showPing": true,
+  "showGamemode": true,
+  "showMap": true,
+  "showPeak24h": true,
+  "peakDataFile": "./peakData.json",
+  "buttons": [
+    {
+      "label": "Se connecter",
+      "url": "https://tinyurl.com/4btx9stk"
+    },
+    {
+      "label": "Collection",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3596544134"
+    }
+  ]
 }
-

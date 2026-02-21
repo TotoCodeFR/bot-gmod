@@ -91,7 +91,7 @@ client.once(Events.ClientReady, () => {
         activities: [
             {
                 name: 'Surveillance du serveur...',
-                type: ActivityType.WATCHING,
+                type: ActivityType.Watching,
             },
         ],
     });
@@ -119,7 +119,7 @@ async function checkServerStatus(interaction) {
         }
 
         const activityType =
-            ActivityType[config.setActivityType] || ActivityType.WATCHING;
+            ActivityType[config.setActivityType] || ActivityType.Watching;
 
         client.user.setPresence({
             activities: [
@@ -284,11 +284,58 @@ async function checkServerStatus(interaction) {
             activities: [
                 {
                     name: config.setActivityOffline || 'Serveur hors ligne',
-                    type: ActivityType.WATCHING,
+                    type: ActivityType.Watching,
                 },
             ],
             status: 'idle',
         });
+
+        const offlineEmbed = new EmbedBuilder()
+            .setTitle(`🔴 ${config.servertitle}`)
+            .setColor('#ff0000')
+            .setDescription('Le serveur est actuellement hors ligne.')
+            .setTimestamp();
+
+        if (config.image) {
+            offlineEmbed.setImage(config.image);
+        }
+
+        if (config.footerText) {
+            offlineEmbed.setFooter({
+                text: config.footerText,
+                iconURL: config.footerIcon || null,
+            });
+        }
+
+        const channel = client.channels.cache.get(config.ChannelID);
+        if (channel) {
+            if (!config.MessageID) {
+                const sentMessage = await channel.send({
+                    embeds: [offlineEmbed],
+                    components: [],
+                });
+                config.MessageID = sentMessage.id;
+                fs.writeFileSync(
+                    './config.json',
+                    JSON.stringify(config, null, 2),
+                    'utf-8'
+                );
+            } else {
+                const message = await channel.messages
+                    .fetch(config.MessageID)
+                    .catch(() => null);
+                if (message) {
+                    await message.edit({ embeds: [offlineEmbed], components: [] });
+                } else {
+                    config.MessageID = null;
+                    fs.writeFileSync(
+                        './config.json',
+                        JSON.stringify(config, null, 2),
+                        'utf-8'
+                    );
+                }
+            }
+        }
     }
 }
 

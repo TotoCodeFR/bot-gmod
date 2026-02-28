@@ -33,6 +33,11 @@ const app = express();
 app.get('/ping', (req, res) => {
     res.send('pong');
 });
+
+app.get('/connect', (req, res) => {
+    res.redirect(`steam://connect/${config.ServerIP}:${config.ServerPort}`);
+});
+
 app.listen(process.env.PORT || 3000, () => {
     console.log('Serveur Express démarré');
 });

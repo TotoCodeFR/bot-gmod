@@ -19,7 +19,7 @@
     "buttons": [
         {
             "label": "Se connecter",
-            "url": "https://tinyurl.com/4btx9stk"
+            "url": "steam://connect/51.254.49.234:25607"
         },
         {
             "label": "Collection",
@@ -27,3 +27,4 @@
         }
     ]
 }
+
